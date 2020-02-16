@@ -1,0 +1,12 @@
+{
+    //"editor.fontWeight": "bold",
+    "editor.fontSize": 16,
+    "workbench.iconTheme": "material-icon-theme",
+    "editor.cursorWidth": 5,
+    "workbench.colorTheme": "Monokai Dimmed",
+    "window.zoomLevel": 0,
+    "editor.minimap.enabled": false,
+    "workbench.colorCustomizations": {
+        "editor.background": "#0a0a0a"
+    }
+}
