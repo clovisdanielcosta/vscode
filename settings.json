@@ -1,0 +1,19 @@
+{
+    "workbench.colorTheme": "Monokai",
+    "workbench.iconTheme": "material-icon-theme",
+    "editor.fontWeight": "600",
+    "editor.fontSize": 14,
+    "workbench.colorCustomizations": {
+        "activityBar.activeBackground": "#b3a80e",
+        "editorIndentGuide.activeBackground": "#3cf12c",
+        "editor.background": "#050000ea",
+        "editor.fontFamily": "Fira Code"
+    },
+    "editor.fontLigatures":true,
+    "editor.suggest.showColors": true,
+    "editor.minimap.enabled": false,
+    "explorer.compactFolders": false,
+    
+    "emmet.syntaxProfiles": {"javascript": "jsx"},
+    "emmet.includeLanguages": {"javascript": "javascriptreact"}
+}
