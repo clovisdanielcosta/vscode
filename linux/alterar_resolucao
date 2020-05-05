@@ -1,0 +1,3 @@
+$ xrandr
+
+$ xrandr --output LVDS1 --scale 1.25x1.25 --panning 1280x750
