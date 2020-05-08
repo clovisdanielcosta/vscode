@@ -1,0 +1,48 @@
+Crie a instância do servidor vps na AWS.
+
+Edite Inbound Rules:
+
+Adicione a porta RDP (3389) com valor 0.0.0.0/0.
+Salve.
+
+Commands for Ubuntu:
+
+sudo apt-get update
+sudo apt-get upgrade
+
+Criar novo usuário (O "-m" serve para criar o diretório do usuário):
+
+# useradd -m usuario
+
+Crie a senha:
+
+# passwd usuario
+
+Adicione o usuário ao grupo sudo:
+
+# usermod -a -G sudo usuario
+
+Altere o shell do usuário:
+
+# chsh -s /bin/bash usuario
+ 
+sudo apt-get install ubuntu-gnome-desktop
+sudo apt-get install -y xrdp
+sudo sed -i 's/allowed_users=console/allowed_users=anybody/' /etc/X11/Xwrapper.config
+sudo nano /etc/polkit-1/localauthority.conf.d/02-allow-colord.conf
+
+----------------------
+polkit.addRule(function(action, subject) {
+if ((action.id == "org.freedesktop.color-manager.create-device" ||
+action.id == "org.freedesktop.color-manager.create-profile" ||
+action.id == "org.freedesktop.color-manager.delete-device" ||
+action.id == "org.freedesktop.color-manager.delete-profile" ||
+action.id == "org.freedesktop.color-manager.modify-device" ||
+action.id == "org.freedesktop.color-manager.modify-profile") &&
+subject.isInGroup("{group}")) {
+return polkit.Result.YES;
+}
+});
+-------------------
+sudo apt-get install gnome-tweak-tool -y
+
