@@ -5,7 +5,7 @@ DotENV
 ESLint
 Live Server
 Material Icon Theme
-vscode-syled-components
+vscode-styled-components
 Rocketseat React JS
 Rocketseat React Native
 
@@ -13,6 +13,6 @@ Font:
 Fira Code with Font Ligatures
 
 Keyboard Shortcuts:
-Toggle Comment Line:  Ctrl + ; (ativa e desativa)
-Toggle Comment Block: Ctrl + \ (ativa e desativa)
+Toggle Line Comment:  Ctrl + ; (ativa e desativa)
+Toggle Block Comment: Ctrl + \ (ativa e desativa)
 Toggle Integrated Terminal: Ctrl + '
