@@ -1,0 +1,71 @@
+Crie a instância do servidor vps na AWS.
+
+Edite Inbound Rules:
+
+Adicione a porta RDP (3389) com valor 0.0.0.0/0.
+Salve.
+
+Commands for Ubuntu:
+
+sudo apt-get update
+sudo apt-get upgrade
+
+Criar novo usuário (O "-m" serve para criar o diretório do usuário):
+
+# useradd -m usuario
+
+Crie a senha:
+
+# passwd usuario
+
+Adicione o usuário ao grupo sudo:
+
+# usermod -a -G sudo usuario
+
+Altere o shell do usuário:
+
+# chsh -s /bin/bash usuario
+
+sudo apt-get install ubuntu-gnome-desktop
+sudo apt-get install -y xrdp
+sudo sed -i 's/allowed_users=console/allowed_users=anybody/' /etc/X11/Xwrapper.config
+sudo nano /etc/polkit-1/localauthority.conf.d/02-allow-colord.conf
+
+----------------------
+polkit.addRule(function(action, subject) {
+if ((action.id == "org.freedesktop.color-manager.create-device" ||
+action.id == "org.freedesktop.color-manager.create-profile" ||
+action.id == "org.freedesktop.color-manager.delete-device" ||
+action.id == "org.freedesktop.color-manager.delete-profile" ||
+action.id == "org.freedesktop.color-manager.modify-device" ||
+action.id == "org.freedesktop.color-manager.modify-profile") &&
+subject.isInGroup("{group}")) {
+return polkit.Result.YES;
+}
+});
+-------------------
+
+sudo apt-get install gnome-tweak-tool -y
+
+------------------------------------
+Mas o xrdp vem com poucas opções de layout de teclado.
+Em um sistema português brasileiro, o teclado fica em inglês
+norte-americano, sem acentuação nem cedilha ou caracteres especiais.
+
+Para se instalar o mapa de teclado brasileiro, deve-se rodar
+o comando (na versão 0.5.0):
+
+
+# sudo xrdp-genkeymap /etc/xrdp/km-0416.ini
+
+
+Isto gera automaticamente a tabela de teclas, suponho que conforme
+o teclado atual do seu sistema. O número 416 é o padronizado para o
+mapa de teclado ABNT brasileiro. Para descobrir o mapas de outros países,
+veja a tabela conforme RFC1766.
+
+Para instalações que não têm o xrdp-genkeymap, fazer o download do arquivo
+"km-0416.ini" e extrair para a pasta /etc/xrdp/:
+
+http://meiradarocha.jor.br/news/wp-content/uploads/2011/05/km-0416.ini_.zip
+

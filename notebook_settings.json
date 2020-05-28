@@ -1,12 +1,25 @@
 {
-    //"editor.fontWeight": "bold",
-    "editor.fontSize": 16,
+    "workbench.colorTheme": "Monokai",
     "workbench.iconTheme": "material-icon-theme",
-    "editor.cursorWidth": 5,
-    "workbench.colorTheme": "Monokai Dimmed",
-    "window.zoomLevel": 0,
-    "editor.minimap.enabled": false,
+    "editor.fontWeight": "500",
+    "editor.fontSize":16,
+    "editor.lineHeight":24,
+    "editor.fontFamily":"Fira Code",
+    "editor.fontLigatures":true,
+
+    "editor.rulers": [
+        80,
+        120
+      ],
+
+      "editor.renderLineHighlight":"gutter",
+
     "workbench.colorCustomizations": {
-        "editor.background": "#0a0a0a"
-    }
+        "activityBar.activeBackground": "#b3a80e",
+        "editorIndentGuide.activeBackground": "#3cf12c",
+        "editor.background": "#050000ea",
+    },
+    "editor.suggest.showColors": true,
+    "editor.minimap.enabled": false,
+    "workbench.startupEditor": "newUntitledFile"
 }
