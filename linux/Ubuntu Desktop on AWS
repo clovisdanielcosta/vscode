@@ -25,10 +25,18 @@ Adicione o usuário ao grupo sudo:
 Altere o shell do usuário:
 
 # chsh -s /bin/bash usuario
- 
-sudo apt-get install ubuntu-gnome-desktop
+
+Para o desktop do Lubuntu LXQt:
+# sudo apt-get install lxqt sddm
+
+Para o Gnome Desktop: 
+# sudo apt-get install ubuntu-gnome-desktop
+
+Instalando o xRDP:
 sudo apt-get install -y xrdp
+
 sudo sed -i 's/allowed_users=console/allowed_users=anybody/' /etc/X11/Xwrapper.config
+
 sudo nano /etc/polkit-1/localauthority.conf.d/02-allow-colord.conf
 
 ----------------------
