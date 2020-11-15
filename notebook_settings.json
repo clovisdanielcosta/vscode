@@ -2,7 +2,7 @@
     "workbench.colorTheme": "Monokai",
     "workbench.iconTheme": "material-icon-theme",
     "editor.fontWeight": "500",
-    "editor.fontSize":16,
+    "editor.fontSize":13,
     "editor.lineHeight":24,
     "editor.fontFamily":"Fira Code",
     "editor.fontLigatures":true,

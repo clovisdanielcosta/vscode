@@ -1,0 +1,78 @@
+{
+	// Place your global snippets here. Each snippet is defined under a snippet name and has a scope, prefix, body and 
+	// description. Add comma separated ids of the languages where the snippet is applicable in the scope field. If scope 
+	// is left empty or omitted, the snippet gets applied to all languages. The prefix is what is 
+	// used to trigger the snippet and the body will be expanded and inserted. Possible variables are: 
+	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. 
+	// Placeholders with the same ids are connected.
+	// Example:
+	// "Print to console": {
+	// 	"scope": "javascript,typescript",
+	// 	"prefix": "log",
+	// 	"body": [
+	// 		"console.log('$1');",
+	// 		"$2"
+	// 	],
+	// 	"description": "Log output to console"
+	// }
+
+	"Comment Documentation Header": {
+		"scope": "javascript, typescript",
+		"prefix": "headerCdoc",
+		"body": [
+			"/*",
+			"<h1>:small_red_triangle_down: ${1:Project_Name} - Documentation</h1>",
+			"<h2>Write here some details of project if you wish.</h2>",
+			"<p>",
+			"<h2> Functions List:</h2>",
+			"[",
+			"Move item list of function to here",
+			"",
+			"]",
+			"</p>",
+			"*/",
+			"",
+			"$2 Your code here",
+			"",
+			"",
+			"",
+			"/*",
+			"When you finish your code take the follow steps:",
+			"1 - Make a copy of this file and rename to extension '.md';",
+			"Open it;",
+			"Remove with Replace of editor the tags of comments /* and */",
+			"/*Then, your documentation will be done.*/",
+		],
+		"description": "Insert comments for documentation"
+	},
+	
+	"Comment Functions Shortcurts for Documentation": {
+		"scope": "javascript, typescript",
+		"prefix": "funcCdoc",
+		"body": [
+			"/*",
+			"## :small_orange_diamond: ${1:label}()",
+			"### <b>Descrição:</b>",
+			"```Javascript",
+			"*/",
+			"function ${1:label}() {",
+			"",
+			"}",
+			"/*",
+			"```",
+			"*/",
+			"/*",
+			"1-Rename the function.",
+			"2-Rename the href link in the last line witch", 
+			"must be lower case format.",
+			"3-Move the last line below to the list of functions",
+			"in the begining of this code. Then you could delete",
+			"this 3 lines comments.",
+			"<a href='#${2:same_name_but_lower_case}'>${1:label}()</a></br>",
+			"*/",
+		],
+		"description": "Insert function with comments in documentation"
+	}, 
+
+	}
+}
