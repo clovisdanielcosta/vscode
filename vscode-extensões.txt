@@ -6,8 +6,7 @@ ESLint
 Live Server
 Material Icon Theme
 vscode-styled-components
-Rocketseat React JS
-Rocketseat React Native
+Auto Rename Tag
 
 Font: 
 Fira Code with Font Ligatures
