@@ -15,3 +15,7 @@ Keyboard Shortcuts:
 Toggle Line Comment:  Ctrl + ; (ativa e desativa)
 Toggle Block Comment: Ctrl + \ (ativa e desativa)
 Toggle Integrated Terminal: Ctrl + '
+
+Dark Mode on Chrome:
+Dark Night Mode
+https://darknightmode.com/
