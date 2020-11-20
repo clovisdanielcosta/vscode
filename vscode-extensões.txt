@@ -7,6 +7,8 @@ Live Server
 Material Icon Theme
 vscode-styled-components
 Auto Rename Tag
+Code Spell Checker (Enable just when needed after coding)
+
 
 Font: 
 Fira Code with Font Ligatures
